@@ -1,4 +1,6 @@
-/*ボディ*/
+/*-----------------------*/
+/*---------ボディ---------*/
+/*-----------------------*/
 body{
     font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-weight: bold;
@@ -7,17 +9,67 @@ body{
     margin: 0 auto;
     position: relative;
 }
-/*ボディ*/
+/*-----------------------*/
+/*---------ボディ---------*/
+/*-----------------------*/
 
-/*ヘッダー
-header{
-    text-align: center;
+
+/*--------------------------------*/
+/*-------------コース-------------*/
+/*--------------------------------*/
+.course{
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+    text-shadow:
+        1px 1px 0px #000, -1px -1px 0px #000,
+        -1px 1px 0px #000,  1px -1px 0px #000,
+        1px 0px 0px #000, -1px  0px 0px #000,
+        0px 1px 0px #000,  0px -1px 0px #000;
 }
-header h1{
+.course_text{
+    display: flex;
+    justify-content: space-between;
+    }
+.teio_meter{
+   outline: solid;
+   outline-color: teal;
+   background-color: white;
+}
+.biwa_meter{
+    outline: solid;
+    outline-color: teal;
+    background-color: white;
+}
+#course_box{
+    width: 0px;
+    max-width: 1200px;
     margin: 10px 0 10px;
+    height: 20px;
+    background-color:skyblue;
 }
-/*ヘッダー*/
-/*gnav*/
+#course_box2{
+    width: 0px;
+    max-width: 1200px;
+    margin: 10px 0 10px;
+    height: 20px;
+    background-color:purple;
+}
+.start{
+    color: red;
+}
+.goal{
+    color: red;
+}
+/*--------------------------------*/
+/*-------------コース-------------*/
+/*--------------------------------*/
+
+
+/*-------------------------------*/
+/*---------説明書きエリア---------*/
+/*-------------------------------*/
 .gnav{
     background:white;
     display: none;
@@ -46,7 +98,6 @@ header h1{
 }.rule_bg_text p{
     margin: 5px 0 5px 0;
 }
-
 .rule_janken h2{
     text-align: center;
     margin: 5px 0 5px 0;}
@@ -67,93 +118,33 @@ header h1{
 .gnav__menu__item a:hover{
     color: red;
 }
+/*-------------------------------*/
+/*---------説明書きエリア---------*/
+/*-------------------------------*/
 
 
-
-
-
-
-.t_skill{
+/*---------------------------------*/
+/*-------------戦闘画面-------------*/
+/*---------------------------------*/
+.main_box{
+    display: flex;
+}   
+    /*テイオースキルの基準*/
+    .t_skill{
     position: absolute;
     top: 49.4%;
     left: 22.9%;
     transform: translate(-50%, -50%);
     width: 250px;
-    height: 420px;
-}
-.skill_video1{
+    height: 420px;      
+    }
+    .skill_video1{
     width: 100%;
     height: 100%;
-}
-.demo2{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/*
-/*
-コース
-*/
-.course{
-    width: 1000px;
-    margin: 0 auto;
-    font-size: 20px;
-    color: white;
-    text-shadow:
-        1px 1px 0px #000, -1px -1px 0px #000,
-        -1px 1px 0px #000,  1px -1px 0px #000,
-        1px 0px 0px #000, -1px  0px 0px #000,
-        0px 1px 0px #000,  0px -1px 0px #000;
-}
-.course_text{
-    display: flex;
-    justify-content: space-between;
     }
-.teio_meter{
-   outline: solid;
-   outline-color: teal;
-   background-color: white;
-}
-.biwa_meter{
-    outline: solid;
-    outline-color: teal;
-    background-color: white;
-}
+    /*テイオースキルの基準*/
 
-#course_box{
-    width: 0px;
-    max-width: 1000px;
-    margin: 10px 0 10px;
-    height: 20px;
-    background-color:skyblue;
-}
-#course_box2{
-    width: 0px;
-    max-width: 1000px;
-    margin: 10px 0 10px;
-    height: 20px;
-    background-color:purple;
-}
-.start{
-    color: red;
-}
-.goal{
-    color: red;
-}
-/*
-/*
-コース
-*/
-
-/*
-/*
-戦闘画面
-*/
-.main_box{
-    display: flex;
-}   
+    /*スキル＆ナビゲーションエリア*/
     .navi{
         flex-direction: column;
         justify-content: center;
@@ -183,10 +174,7 @@ header h1{
 	    position: relative;
         top: 3px;
     }
-    .chara_right_box{
-        width: 150px;
-        
-    }
+    
     .syouhai{
         font-size: 20px;
     }
@@ -196,27 +184,9 @@ header h1{
     #count_l{
         color: blue;
     }
- /*キャラクター左*/
-    .chara_left{
-        /*color: white;*/
-        text-align: center;
-    }
-    .chara_left img{
-        width: 250px;
-        height: 420px;
-    }
-    .chara_left p{
-        font-size: 24px;
-        color: white;
-        text-shadow:
-        1px 1px 0px #000, -1px -1px 0px #000,
-        -1px 1px 0px #000,  1px -1px 0px #000,
-        1px 0px 0px #000, -1px  0px 0px #000,
-        0px 1px 0px #000,  0px -1px 0px #000;
-        margin: 0 0 5px 0;
-    }
-/*キャラクター左*/
-/*ジャンケン画面*/
+     /*スキル＆ナビゲーションエリア*/
+
+    /*真ん中動画エリア*/
     .middle_box{
         width: 390px;
         height: 220px;
@@ -231,6 +201,9 @@ header h1{
         height: 220px;
         margin: 0;
     }
+    /*真ん中動画エリア*/
+
+    /*じゃんけんボタンエリア全体*/
     .vs{
         width: 450px;
         height: 400px;
@@ -258,6 +231,7 @@ header h1{
     .com_img{
         width: 90px;
     }
+    /*じゃんけんボタンエリア全体*/
     
     /*プレイヤージャンケンエリア*/
         .player_hand{
@@ -297,10 +271,29 @@ header h1{
         top: 3px;
         }
     /*プレイヤージャンケンエリア*/
-/*ジャンケン画面*/
+
+    /*キャラクター左*/
+    .chara_left{
+        text-align: center;
+    }
+    .chara_left img{
+        width: 250px;
+        height: 420px;
+    }
+    .chara_left p{
+        font-size: 24px;
+        color: white;
+        text-shadow:
+        1px 1px 0px #000, -1px -1px 0px #000,
+        -1px 1px 0px #000,  1px -1px 0px #000,
+        1px 0px 0px #000, -1px  0px 0px #000,
+        0px 1px 0px #000,  0px -1px 0px #000;
+        margin: 0 0 5px 0;
+    }
+    /*キャラクター左*/
+
     /*キャラクター右*/
     .chara_right{
-        /*color: white;*/
         text-align: center;
     }
     .chara_right img{
@@ -317,7 +310,11 @@ header h1{
         0px 1px 0px #000,  0px -1px 0px #000;
         margin: 0 0 5px 0;
     }
+    .chara_right_box{
+        width: 150px;        
+    }
     /*キャラクター右*/
+
     /*勝敗*/
     .vs table{
         width: 400px;
@@ -334,12 +331,14 @@ header h1{
         height: 50px;
     }
     /*勝敗*/
-/*
-/*
-戦闘画面
-*/
+/*---------------------------------*/
+/*-------------戦闘画面-------------*/
+/*---------------------------------*/
 
-/*解説画面*/
+
+/*---------------------------------*/
+/*-------------解説画面-------------*/
+/*---------------------------------*/
 .kaisetsu_box{
     display: flex;
     width: 900px;
@@ -368,3 +367,6 @@ header h1{
     font-size: 17px;
     margin: 0 0 0 10px;
 }
+/*---------------------------------*/
+/*-------------解説画面-------------*/
+/*---------------------------------*/

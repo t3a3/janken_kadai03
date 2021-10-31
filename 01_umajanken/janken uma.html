@@ -12,9 +12,10 @@
   <header>
   </header>
 
+  <!---------------説明書き--------------->
   <nav class="gnav">
     <div class="gnav__wrap">
-      <img src="img/rule.jpg" alt="">
+      <img src="img/rule.jpg" alt="ルール画像">
       <div class="rule_bg_text">
         <p>3度の骨折を乗り越えたトウカイテイオーが挑むは有馬記念。</p>
         <p>強豪を相手に苦しいレースの中、必死に喰らいつこうとする彼女の夢の行方は――。</p>
@@ -35,13 +36,16 @@
         <li class="gnav__menu__item"><a href="">PLAY</a></li>
       </ul>
     </div>
-    <!--gnav-wrap-->
   </nav>
+  <!----------------説明書き---------------->
 
-  <div class="t_skill">
-    <video src="" alt="" autoplay id="skill_video1" class="skill_video1"></video>
-  </div>
+  <!--                                  -->
+  <!--                                  -->
+  <!--                                  -->
+
+  <!---------------メイン画面--------------->
   <div id="game">
+    <!---------------メーターエリア--------------->
     <section class="course">
       <div class="course_text">
         <p class="start">START</p>
@@ -59,14 +63,18 @@
         </div>
       </div>
     </section>
-    <!--メイン-->
+    <!---------------メーターエリア--------------->
+
+    <!---------------メイン--------------->
     <main>
       <!--メイン画面-->
       <div class="main_box">
-
-        <!--ナビエリア＆スキルエリア-->
+        <!---------------ナビエリア＆スキルエリア--------------->
+        <div class="t_skill">
+          <video src="" alt="テイオースキル" autoplay id="skill_video1" class="skill_video1"></video>
+        </div>
         <div class="navi">
-          <button type="button" class="rule_btn">reedme</button>
+          <button type="button" class="rule_btn">readme</button>
           <div class="skill_box" id="skill_box">
             <input type="image" src="img/skill_btn.png" class="skill" id="skill">
             <input type="image" src="img/skill_btn2.png" class="skill2" id="skill2">
@@ -74,21 +82,23 @@
           <div class="syouhai">
             <p>勝ち：<span id="count_w">0</span></p>
             <p>負け：<span id="count_l">0</span></p>
+            <p>あいこ：<span id="count_d">0</span></p>
           </div>
         </div>
+        <!---------------ナビエリア＆スキルエリア--------------->
 
-        <!--プレイヤー-->
+        <!---------------トウカイテイオーエリア--------------->
         <div class="chara_left">
-          <img src="img/teio_tachi.png" alt="" id="teio">
+          <img src="img/teio_tachi.png" alt="トウカイテイオー" id="teio">
           <p>トウカイテイオー</p>
         </div>
-        <!--プレイヤー-->
+        <!---------------トウカイテイオーエリア--------------->
 
-        <!--VS-->
+        <!---------------VS（じゃんけんエリア）--------------->
         <div class="vs">
           <table>
             <div class="middle_box" id="middle_box">
-              <video src="" alt="" autoplay id="middle_video" class="middle_video">
+              <video src="" alt="ビデオエリア" autoplay id="middle_video" class="middle_video">
             </div>
             <tr>
               <th>あなたの手</th>
@@ -97,7 +107,7 @@
             </tr>
             <tr class="vs_hand">
               <td><img src="" alt="" id="user_img" class="user_img"></td>
-              <td><img src="img/vs.png" alt="" class="vs_img"></td>
+              <td><img src="img/vs.png" alt="VSイメージ" class="vs_img"></td>
               <td><img src="" alt="" id="com_img" class="com_img"></td>
             </tr>
             <tr class="vs_result_box">
@@ -106,26 +116,28 @@
               </td>
             </tr>
             <tr class="player_hand" id="player_hand">
-              <td><img src="img/gu.png" alt="" class="gu_btn" id="gu_btn"></td>
-              <td><img src="img/choki.png" alt="" class="choki_btn" id="choki_btn"></td>
-              <td><img src="img/par.png" alt="" class="par_btn" id="par_btn"></td>
+              <td><img src="img/gu.png" alt="グー" class="gu_btn" id="gu_btn"></td>
+              <td><img src="img/choki.png" alt="チョキ" class="choki_btn" id="choki_btn"></td>
+              <td><img src="img/par.png" alt="パー" class="par_btn" id="par_btn"></td>
             </tr>
           </table>
         </div>
-        <!--VS-->
+        <!---------------VS（じゃんけんエリア）--------------->
 
-        <!--ビワハヤヒデ-->
+        <!---------------ビワハヤヒデエリア--------------->
         <div class="chara_right">
-          <img src="img/biwa_tachi.png" alt="" id="biwa">
+          <img src="img/biwa_tachi.png" alt="biwahayahide" id="biwa">
           <p class="enemy">ビワハヤヒデ</p>
         </div>
-        <!--ビワハヤヒデ-->
+        <!---------------ビワハヤヒデエリア--------------->
+
+        <!---------------ビワハヤヒデ右空白--------------->
         <div class="chara_right_box">
         </div>
+        <!---------------ビワハヤヒデ右空白--------------->
       </div>
-      <!--戦闘画面-->
 
-      <!--解説画面-->
+      <!---------------解説画面--------------->
       <div class="kaisetsu_box">
         <img src="img/kaisetsu.png" alt="" class="motobe">
         <div class="kaisetsu_text_sbox">
@@ -134,22 +146,40 @@
           <div id="kaisetsu_text2" class="kaisetsu_text2"></div>
         </div>
       </div>
-      <!--解説画面-->
+      <!---------------解説画面--------------->
   </div>
   </main>
-  <!--メイン-->
+  <!---------------メイン画面--------------->
+
+  <!--                                  -->
+  <!--                                  -->
+  <!--                                  -->
 
   <!--フッター-->
   <footer></footer>
   <!--フッター-->
 
+  <!--                                  -->
+  <!--                                  -->
+  <!--                                  -->
+
+  <!---------------ジャバスクリプト--------------->
   <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
   </script>
   <script>
+    //////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////説明書きエリア//////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
     $('.rule_btn').on('click', function () {
       $('.gnav').fadeToggle();
     });
-    /////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////説明書きエリア//////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////
+    /////////////////////////テイオースキル1（150進む）/////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////
     $('#skill').one('click', function (e) {
       let kyori = document.getElementById("course_box").clientWidth;
       const skill_stop = document.getElementById("skill_video1");
@@ -169,7 +199,9 @@
         }, 12000);
       }
     });
-    /////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
+    ////////////////////テイオースキル2（相手の距離-20まで進む）//////////////////////
+    ///////////////////////////////////////////////////////////////////////////////
     $('#skill2').one('click', function (e) {
       let kyori = document.getElementById("course_box").clientWidth;
       let kyori_b = document.getElementById("course_box2").clientWidth;
@@ -191,7 +223,10 @@
       }
     });
     //////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////
     ///////////////////グーグーグー///////////////////////////////////
+    /////////////////////////////////////////////////////////////////
     $("#gu_btn").on("click", function () {
       const randomNumber = Math.floor(Math.random() * 100);
       console.log(randomNumber);
@@ -203,10 +238,15 @@
         com_img.src = "img/gu_b.png";
         //ジャンケンの結果 あいこ
         $("#result").text("あいこ");
+        var thisCount = $("#count_d").html();
+        thisCount = Number(thisCount);
+        thisCount = thisCount + 1;
+        $("#count_d").html(thisCount);
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 50) + "px";
+        document.getElementById('course_box').style.width = (kyori + 70) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 51) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -221,10 +261,15 @@
         com_img.src = "img/gu_b.png";
         //ジャンケンの結果 あいこ
         $("#result").text("あいこ");
+        var thisCount = $("#count_d").html();
+        thisCount = Number(thisCount);
+        thisCount = thisCount + 1;
+        $("#count_d").html(thisCount);
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 50) + "px";
+        document.getElementById('course_box').style.width = (kyori + 50) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -246,7 +291,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 100) + "px";
+        document.getElementById('course_box').style.width = (kyori + 120) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -269,6 +315,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 150) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -290,7 +337,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 90) + "px";
+        document.getElementById('course_box').style.width = (kyori + 60) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -312,7 +360,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 120) + "px";
+        document.getElementById('course_box').style.width = (kyori + 80) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 131) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -320,8 +369,9 @@
         document.getElementById("kaisetsu_text2").innerHTML = "これが菊花賞ウマ娘の実力だ！";
       }
     })
-
+    ///////////////////////////////////////////////////////////////////////
     ///////////////////チョキチョキチョキ///////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
     $("#choki_btn").on("click", function () {
       const randomNumber = Math.floor(Math.random() * 100);
       console.log(randomNumber);
@@ -336,14 +386,14 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 50) + "px";
+        document.getElementById('course_box').style.width = (kyori + 70) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 51) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
         document.getElementById("kaisetsu_text").innerHTML = "トウカイテイオーとビワハヤヒデは互いにチョキを出したのであいこだ！";
         document.getElementById("kaisetsu_text2").innerHTML = "観客の声援がトウカイテイオーを後押しする！";
-      }
-      else if (randomNumber >= 10 && randomNumber <= 19) {
+      } else if (randomNumber >= 10 && randomNumber <= 19) {
         //自分と相手のジャンケン画像を出す
         let user_img = document.getElementById("user_img");
         user_img.src = "img/choki.png";
@@ -354,7 +404,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 50) + "px";
+        document.getElementById('course_box').style.width = (kyori + 50) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -377,6 +428,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 100) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -398,7 +450,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 100) + "px";
+        document.getElementById('course_box').style.width = (kyori + 80) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 111) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -406,8 +459,9 @@
         document.getElementById("kaisetsu_text2").innerHTML = "ビワハヤヒデ、前に進んでいく！";
       }
     })
-
+    /////////////////////////////////////////////////////////////////////
     ///////////////////////////パーパーパー///////////////////////////////
+    /////////////////////////////////////////////////////////////////////
     $("#par_btn").on("click", function () {
       const randomNumber = Math.floor(Math.random() * 100);
       console.log(randomNumber);
@@ -422,7 +476,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 50) + "px";
+        document.getElementById('course_box').style.width = (kyori + 60) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 51) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -440,7 +495,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 50) + "px";
+        document.getElementById('course_box').style.width = (kyori + 60) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -463,6 +519,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 100) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -485,6 +542,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 120) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -506,7 +564,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 90) + "px";
+        document.getElementById('course_box').style.width = (kyori + 60) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -528,7 +587,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box2').style.width = (kyori_b + 170) + "px";
+        document.getElementById('course_box').style.width = (kyori + 100) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 151) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -537,6 +597,8 @@
       }
     })
     /////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////
     $('#gu_btn,#par_btn,#choki_btn').on('click', function () {
       const gole_1 = document.getElementById("course_box").clientWidth;
       const gole_2 = document.getElementById("course_box2").clientWidth;
@@ -544,14 +606,14 @@
       const skill_none = document.getElementById("skill_box");
       console.log(gole_1);
       console.log(gole_2);
-      if (gole_1 + gole_2 === 2000) {
+      if (gole_1 === 1000 && gole_2 === 1000) {
         $("#result").text("引き分け");
         const element = document.getElementById('player_hand');
         element.remove();
         document.getElementById('course_box').style.width = "0px";
         document.getElementById('course_box2').style.width = "0px";
       }
-      else if (200 <= gole_1 && gole_1 <= 300 && 300 < gole_2 && gole_2 < 410) {
+      else if (200 <= gole_1 && gole_1 <= 300 && 200 < gole_2 && gole_2 < 410 && gole_1 < gole_2) {
         document.getElementById('course_box').style.width = (gole_1 + 50) + "px";
         document.getElementById('course_box2').style.width = (gole_2 + 50) + "px";
         let middle_video = document.getElementById("middle_video");
@@ -559,7 +621,7 @@
         document.getElementById("kaisetsu_text").innerHTML = "トウカイテイオーが来た……えっ、トウカイテイオーが来た！？";
         document.getElementById("kaisetsu_text2").innerHTML = "ビワハヤヒデとの距離をグングンとつめていく！";
       }
-      else if (550 <= gole_1 && gole_1 <= 650 && 650 < gole_2 && gole_2 < 760) {
+      else if (550 <= gole_1 && gole_1 <= 650 && 650 < gole_2 && gole_2 < 760 && gole_1 < gole_2) {
         document.getElementById('course_box').style.width = (gole_1 + 50) + "px";
         document.getElementById('course_box2').style.width = (gole_2 + 50) + "px";
         let middle_video = document.getElementById("middle_video");
@@ -567,7 +629,7 @@
         document.getElementById("kaisetsu_text").innerHTML = "残り100メートル。新世代覇者ビワハヤヒデ、蘇るのかトウカイテイオー！";
         document.getElementById("kaisetsu_text2").innerHTML = "中山が、中山が震えているぞ有馬記念！はたしていったいどちらが勝つのか！？";
       }
-      else if (gole_1 === 1000 && gole_2 > 750) {
+      else if (gole_1 >= 1000 && gole_2 > 750 && gole_1 > gole_2) {
         let middle_video = document.getElementById("middle_video");
         middle_video.src = "img/arima_goal.mp4";
         let teio_win = document.getElementById("teio");
@@ -575,6 +637,8 @@
         let biwa_lose = document.getElementById("biwa");
         biwa_lose.src = "img/biwa_lose.png";
         $("#result").text("トウカイテイオーの勝利!!");
+        document.getElementById('course_box').style.width = "1000px";
+        document.getElementById('course_box2').style.width = "0px";
         const element = document.getElementById('player_hand');
         element.remove();
         const displayOriginal = skill_none.style.display;
@@ -582,7 +646,7 @@
         document.getElementById("kaisetsu_text").innerHTML = "トウカイテイオー、トウカイテイオーだ！トウカイテイオー奇跡の復活！";
         document.getElementById("kaisetsu_text2").innerHTML = "決して諦めず、絶対を証明してみせました！";
       }
-      else if (gole_1 === 1000 && gole_2 < 800) {
+      else if (gole_1 >= 1000 && gole_2 < 800 && gole_1 > gole_2) {
         let middle_video = document.getElementById("middle_video");
         middle_video.src = "img/win_video.mp4";
         let teio_win = document.getElementById("teio");
@@ -590,6 +654,8 @@
         let biwa_lose = document.getElementById("biwa");
         biwa_lose.src = "img/biwa_lose.png";
         $("#result").text("トウカイテイオーの勝利!!");
+        document.getElementById('course_box').style.width = "1000px";
+        document.getElementById('course_box2').style.width = "0px";
         const element = document.getElementById('player_hand');
         element.remove();
         const displayOriginal = skill_none.style.display;
@@ -597,7 +663,7 @@
         document.getElementById("kaisetsu_text").innerHTML = "さすがはトウカイテイオー！久しぶりのターフでも関係ない！";
         document.getElementById("kaisetsu_text2").innerHTML = "天才はいる、悔しいが！";
       }
-      else if (gole_2 === 1000) {
+      else if (gole_2 >= 1000 && gole_1 < gole_2) {
         $("#result").text("トウカイテイオーの負け…");
         const element = document.getElementById('player_hand');
         const element2 = document.getElementById('middle_video');
@@ -605,6 +671,8 @@
         teio_lose.src = "img/teio_lose.png";
         let biwa_win = document.getElementById("biwa");
         biwa_win.src = "img/biwa_win.png";
+        document.getElementById('course_box').style.width = "0px";
+        document.getElementById('course_box2').style.width = "1000px";
         element.remove();
         element2.remove();
         const displayOriginal = skill_none.style.display;
@@ -618,6 +686,7 @@
       }
     });
   </script>
+  <!---------------ジャバスクリプト--------------->
 </body>
 
 </html>
