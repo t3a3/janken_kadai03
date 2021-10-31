@@ -1,0 +1,370 @@
+/*ボディ*/
+body{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-weight: bold;
+    background-color: lightgreen;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+/*ボディ*/
+
+/*ヘッダー
+header{
+    text-align: center;
+}
+header h1{
+    margin: 10px 0 10px;
+}
+/*ヘッダー*/
+/*gnav*/
+.gnav{
+    background:white;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 1200px;
+    z-index: 98;
+}
+.gnav__menu{
+    list-style-type: none
+}
+.gnav__wrap{
+    align-items:center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.rule_bg_text{
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 0 10px 0;
+}.rule_bg_text p{
+    margin: 5px 0 5px 0;
+}
+
+.rule_janken h2{
+    text-align: center;
+    margin: 5px 0 5px 0;}
+
+.rule_skill h2{
+    text-align: center;
+    margin: 5px 0 5px 0;}    
+.gnav__menu__item{
+    margin: 10px 0;
+}
+.gnav__menu__item a{
+    color: #666;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .5s;
+}
+.gnav__menu__item a:hover{
+    color: red;
+}
+
+
+
+
+
+
+.t_skill{
+    position: absolute;
+    top: 49.4%;
+    left: 22.9%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 420px;
+}
+.skill_video1{
+    width: 100%;
+    height: 100%;
+}
+.demo2{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*
+/*
+コース
+*/
+.course{
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+    text-shadow:
+        1px 1px 0px #000, -1px -1px 0px #000,
+        -1px 1px 0px #000,  1px -1px 0px #000,
+        1px 0px 0px #000, -1px  0px 0px #000,
+        0px 1px 0px #000,  0px -1px 0px #000;
+}
+.course_text{
+    display: flex;
+    justify-content: space-between;
+    }
+.teio_meter{
+   outline: solid;
+   outline-color: teal;
+   background-color: white;
+}
+.biwa_meter{
+    outline: solid;
+    outline-color: teal;
+    background-color: white;
+}
+
+#course_box{
+    width: 0px;
+    max-width: 1000px;
+    margin: 10px 0 10px;
+    height: 20px;
+    background-color:skyblue;
+}
+#course_box2{
+    width: 0px;
+    max-width: 1000px;
+    margin: 10px 0 10px;
+    height: 20px;
+    background-color:purple;
+}
+.start{
+    color: red;
+}
+.goal{
+    color: red;
+}
+/*
+/*
+コース
+*/
+
+/*
+/*
+戦闘画面
+*/
+.main_box{
+    display: flex;
+}   
+    .navi{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 150px;
+    }
+    .rule_btn{
+        width: 130px;
+        margin: 0 10px 0 10px;
+    }
+    .skill{
+        background-size: cover;
+        margin: 10px 10px 0 10px;
+        width: 130px;
+    }
+    .skill:active {
+	    position: relative;
+        top: 3px;
+    }
+    .skill2{
+        background-size: cover;
+        margin: 10px 10px 0 10px;
+        width: 130px;
+    }
+    .skill2:active {
+	    position: relative;
+        top: 3px;
+    }
+    .chara_right_box{
+        width: 150px;
+        
+    }
+    .syouhai{
+        font-size: 20px;
+    }
+    #count_w{
+        color: red;
+    }
+    #count_l{
+        color: blue;
+    }
+ /*キャラクター左*/
+    .chara_left{
+        /*color: white;*/
+        text-align: center;
+    }
+    .chara_left img{
+        width: 250px;
+        height: 420px;
+    }
+    .chara_left p{
+        font-size: 24px;
+        color: white;
+        text-shadow:
+        1px 1px 0px #000, -1px -1px 0px #000,
+        -1px 1px 0px #000,  1px -1px 0px #000,
+        1px 0px 0px #000, -1px  0px 0px #000,
+        0px 1px 0px #000,  0px -1px 0px #000;
+        margin: 0 0 5px 0;
+    }
+/*キャラクター左*/
+/*ジャンケン画面*/
+    .middle_box{
+        width: 390px;
+        height: 220px;
+        margin: 0 auto;
+        outline: solid;
+        outline-color: teal;
+        background-image: url(../img/middle_bg.png);
+    }
+    .middle_box video{
+        justify-content: center;
+        width: 100%;
+        height: 220px;
+        margin: 0;
+    }
+    .vs{
+        width: 450px;
+        height: 400px;
+        padding: 0 10px 0 10px;
+    }
+    .vs table{
+        width: 300px;
+        table-layout: fixed;   
+        margin: 0 auto;
+    }
+    .vs_img{
+        width: 60px;
+        text-align: center;
+    }
+    .vs_hand{
+        height: 90px;
+    }
+    .vs_hand td{
+        text-align:center; 
+        vertical-align:middle;
+    }    
+    .user_img{
+        width: 90px;
+    }
+    .com_img{
+        width: 90px;
+    }
+    
+    /*プレイヤージャンケンエリア*/
+        .player_hand{
+            text-align: center;
+            width: 300px;
+        }
+        .player_hand td{
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .player_hand img{
+            width: 60px;
+        }
+        .gu_btn:hover{
+        opacity:0.8;
+        cursor: pointer;
+        }
+        .gu_btn:active{
+        position: relative;
+        top: 3px;
+        }
+        .choki_btn:hover{
+        opacity:0.8;
+        cursor: pointer;
+        }
+        .choki_btn:active{
+        position: relative;
+        top: 3px;
+        }
+        .par_btn:hover{
+        opacity:0.8;
+        cursor: pointer;
+        }
+        .par_btn:active{
+        position: relative;
+        top: 3px;
+        }
+    /*プレイヤージャンケンエリア*/
+/*ジャンケン画面*/
+    /*キャラクター右*/
+    .chara_right{
+        /*color: white;*/
+        text-align: center;
+    }
+    .chara_right img{
+        width: 250px;
+        height: 420px;
+    }
+    .chara_right p{
+        font-size: 24px;
+        color: white;
+        text-shadow:
+        1px 1px 0px #000, -1px -1px 0px #000,
+        -1px 1px 0px #000,  1px -1px 0px #000,
+        1px 0px 0px #000, -1px  0px 0px #000,
+        0px 1px 0px #000,  0px -1px 0px #000;
+        margin: 0 0 5px 0;
+    }
+    /*キャラクター右*/
+    /*勝敗*/
+    .vs table{
+        width: 400px;
+    }
+    #result{
+        width: 100%;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .vs_result_box{
+        height: 50px;
+    }
+    /*勝敗*/
+/*
+/*
+戦闘画面
+*/
+
+/*解説画面*/
+.kaisetsu_box{
+    display: flex;
+    width: 900px;
+    margin: 0 150px 0 150px;
+    height: 100px;
+    background-color: white;
+    outline: solid;
+    outline-color: red;
+}
+.kaisetsu_text_sbox{
+    display: flex;
+    flex-flow: column;
+}
+.motobe_name{
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+.motobe{
+    width: 100px;
+}
+.kaisetsu_text{
+    font-size: 17px;
+    margin: 0 0 0 10px;
+}
+.kaisetsu_text2{
+    font-size: 17px;
+    margin: 0 0 0 10px;
+}
