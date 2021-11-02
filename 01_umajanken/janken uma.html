@@ -10,7 +10,6 @@
 
 <body>
   <header>
-    <p>aaa</p>
   </header>
 
   <!---------------説明書き--------------->
@@ -29,7 +28,7 @@
       </div>
       <div class="rule_skill">
         <h2>スキルについて</h2>
-        <p>スキルはどちらか１回しか使えず、トウカイテイオーの進んだ距離が８割を超えると自動的に使えないよう非表示化されます。</p>
+        <p class="skill_subtext">スキルはどちらか１回しか使えません。</p>
         <p>『究極テイオーステップ』……１度だけ大きく前に進みます。</p>
         <p>『絶対はボクだ』……相手の手前まで一気に進みます。こちらが勝ってる場合発動しません。（原作再現用）</p>
       </div>
@@ -47,22 +46,26 @@
   <!---------------メイン画面--------------->
   <div id="game">
     <!---------------メーターエリア--------------->
-    <section class="course">
-      <div class="course_text">
-        <p class="start">START</p>
-        <p></p>
-        <p>｜</p>
-        <p></p>
-        <p class="goal">GOAL</p>
-      </div>
-      <div class="white_back">
-        <div class="teio_meter">
-          <div class="course_box" id="course_box"></div>
+    <div class="mater">
+      <section class="course">
+        <div class="course_text">
+          <p class="start">START</p>
+          <p>｜</p>
+          <p>｜</p>
+          <p>｜</p>
+          <p>｜</p>
+          <p>｜</p>
+          <p class="goal">GOAL</p>
         </div>
-        <div class="biwa_meter">
-          <div class="course_box2" id="course_box2"></div>
+        <div class="white_back">
+          <div class="teio_meter">
+            <div class="course_box" id="course_box"></div>
+          </div>
+          <div class="biwa_meter">
+            <div class="course_box2" id="course_box2"></div>
+          </div>
         </div>
-      </div>
+    </div>
     </section>
     <!---------------メーターエリア--------------->
 
@@ -184,7 +187,7 @@
     $('#skill').one('click', function (e) {
       let kyori = document.getElementById("course_box").clientWidth;
       const skill_stop = document.getElementById("skill_video1");
-      if (kyori < 800) {
+      if (kyori < 850) {
         const res_col = document.getElementById("result");
         document.getElementById('course_box').style.width = (kyori + 150) + "px";
         const obj = document.getElementById("skill");
@@ -194,6 +197,32 @@
         skill_video1.src = "img/teio_skill.mp4";
         document.getElementById("kaisetsu_text").innerHTML = "スキル発動『究極テイオーステップ』";
         document.getElementById("kaisetsu_text2").innerHTML = "トウカイテイオー、大きく前に進んでいきます！！";
+        setTimeout(function () {
+          const displayOriginal = skill_stop.style.display;
+          skill_stop.style.display = 'none';
+        }, 12000);
+      }
+      else if (kyori >= 850) {
+        const res_col = document.getElementById("result");
+        document.getElementById('course_box').style.width = (kyori + 150) + "px";
+        const obj = document.getElementById("skill");
+        const obj2 = document.getElementById("skill2");
+        obj.style.opacity = 0.5;
+        obj2.style.display = "none";
+        skill_video1.src = "img/teio_skill.mp4";
+        let middle_video = document.getElementById("middle_video");
+        middle_video.src = "img/arima_goal.mp4";
+        let teio_win = document.getElementById("teio");
+        teio_win.src = "img/teio_win.png";
+        let biwa_lose = document.getElementById("biwa");
+        biwa_lose.src = "img/biwa_lose.png";
+        $("#result").text("トウカイテイオーの勝利!!");
+        document.getElementById('course_box').style.width = "1000px";
+        document.getElementById('course_box2').style.width = "0px";
+        const element = document.getElementById('player_hand');
+        element.remove();
+        document.getElementById("kaisetsu_text").innerHTML = "トウカイテイオー、トウカイテイオーだ！トウカイテイオー奇跡の復活！";
+        document.getElementById("kaisetsu_text2").innerHTML = "決して諦めず、絶対を証明してみせました";
         setTimeout(function () {
           const displayOriginal = skill_stop.style.display;
           skill_stop.style.display = 'none';
@@ -247,12 +276,14 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 70) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 51) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 50) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
         document.getElementById("kaisetsu_text").innerHTML = "トウカイテイオーとビワハヤヒデは互いにグーを出したのであいこだ！";
         document.getElementById("kaisetsu_text2").innerHTML = "観客の声援がトウカイテイオーを後押しする！";
+        let win_count = document.getElementById("count_w");
+        console.log(win_count);
       }
       else if (randomNumber >= 15 && randomNumber <= 19) {
         //自分と相手のジャンケン画像を出す
@@ -270,7 +301,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 50) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 70) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -293,7 +324,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 120) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 20) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -316,7 +347,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 150) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 20) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -338,8 +369,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 60) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
+        document.getElementById('course_box').style.width = (kyori + 20) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 90) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -361,8 +392,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 80) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 131) + "px";
+        document.getElementById('course_box').style.width = (kyori + 20) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 130) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -388,7 +419,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 70) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 51) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 50) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -406,7 +437,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 50) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 70) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -429,7 +460,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 100) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 20) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -451,8 +482,8 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 80) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 111) + "px";
+        document.getElementById('course_box').style.width = (kyori + 20) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 110) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -520,7 +551,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 100) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 71) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 21) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -543,7 +574,7 @@
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
         document.getElementById('course_box').style.width = (kyori + 120) + "px";
-        document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
+        document.getElementById('course_box2').style.width = (kyori_b + 21) + "px";
         console.log(kyori);
         console.log(kyori_b);
         //解説のテキスト
@@ -565,7 +596,7 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 60) + "px";
+        document.getElementById('course_box').style.width = (kyori + 20) + "px";
         document.getElementById('course_box2').style.width = (kyori_b + 91) + "px";
         console.log(kyori);
         console.log(kyori_b);
@@ -588,7 +619,7 @@
         //結果による進んだ距離
         let kyori = document.getElementById("course_box").clientWidth;
         let kyori_b = document.getElementById("course_box2").clientWidth;
-        document.getElementById('course_box').style.width = (kyori + 100) + "px";
+        document.getElementById('course_box').style.width = (kyori + 20) + "px";
         document.getElementById('course_box2').style.width = (kyori_b + 151) + "px";
         console.log(kyori);
         console.log(kyori_b);
@@ -681,10 +712,11 @@
         document.getElementById("kaisetsu_text").innerHTML = "強すぎるビワハヤヒデ！圧倒的な力でライバルたちを寄せ付けない！";
         document.getElementById("kaisetsu_text2").innerHTML = "誰もこのウマ娘に勝つことはできないのか！？";
       }
-      else if (gole_1 > 800) {
-        const displayOriginal = skill_none.style.display;
-        skill_none.style.display = 'none';
-      }
+      //
+      //else if (gole_1 > 800) {
+      //const displayOriginal = skill_none.style.display;
+      //skill_none.style.display = 'none';
+      //}
     });
   </script>
   <!---------------ジャバスクリプト--------------->
